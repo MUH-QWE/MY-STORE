@@ -12,6 +12,7 @@ window.renderNav = function () {
     let html = `
         <a href="index.html">Home</a>
         <a href="Products.html">Products</a>
+        <a href="Contact.html">Contact</a>
     `;
 
     if (user) {
