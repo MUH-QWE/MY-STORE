@@ -34,10 +34,7 @@ window.api = {
             // --- Fallback Mock Data ---
             const products = getProducts();
             if (endpoint.includes('/orders/get_all.php')) return MOCK_ORDERS;
-            if (endpoint.includes('/orders/get.php')) return [
-                { id: 2045, status: 'Pending', created_at: '2025-12-25T10:00:00Z', total_amount: 1850.00, address: 'Cairo, Maadi St. 5', phone: '01011223344', method: 'Vodafone Cash' },
-                { id: 1982, status: 'Shipped', created_at: '2025-12-10T15:30:00Z', total_amount: 850.00, address: 'Alexandria, Corniche', phone: '01233445566', method: 'COD' }
-            ];
+            if (endpoint.includes('/orders/get.php')) return [];
             if (endpoint.includes('/products/get.php')) return products;
             if (endpoint.includes('/products/get_single.php')) {
                 const urlParams = new URL(endpoint, 'http://dummy.com').searchParams;
